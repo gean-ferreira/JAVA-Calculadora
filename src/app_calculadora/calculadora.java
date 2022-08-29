@@ -29,6 +29,7 @@ public class calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
+        setLocation(new java.awt.Point(0, 0));
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
@@ -44,6 +45,7 @@ public class calculadora extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
