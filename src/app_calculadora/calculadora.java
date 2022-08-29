@@ -29,6 +29,7 @@ public class calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
+        setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
