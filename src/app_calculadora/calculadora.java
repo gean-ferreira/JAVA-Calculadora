@@ -16,10 +16,16 @@ public class calculadora extends javax.swing.JFrame {
      */
     public calculadora() {
         initComponents();
+        disable();
+        
     }
     
     public void disable() {
+        btnRadioOn.setEnabled(true); // ON button
+        btnRadioOff.setEnabled(false); // OFF button
+        
         lblResultado.setEnabled(false);
+        
         btnNum0.setEnabled(false);
         btnNum1.setEnabled(false);
         btnNum2.setEnabled(false);
@@ -41,7 +47,11 @@ public class calculadora extends javax.swing.JFrame {
     }
     
     public void enable() {
+        btnRadioOn.setEnabled(false); // ON button
+        btnRadioOff.setEnabled(true); // OFF button
+        
         lblResultado.setEnabled(true);
+        
         btnNum0.setEnabled(true);
         btnNum1.setEnabled(true);
         btnNum2.setEnabled(true);
@@ -136,6 +146,8 @@ public class calculadora extends javax.swing.JFrame {
         buttonGroup1.add(btnRadioOn);
         btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOn.setText("ON");
+        btnRadioOn.setEnabled(false);
+        btnRadioOn.setFocusable(false);
         btnRadioOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRadioOnActionPerformed(evt);
@@ -146,6 +158,7 @@ public class calculadora extends javax.swing.JFrame {
         btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOff.setText("OFF");
         btnRadioOff.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRadioOff.setEnabled(false);
         btnRadioOff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRadioOffActionPerformed(evt);
