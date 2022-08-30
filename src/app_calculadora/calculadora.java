@@ -17,6 +17,50 @@ public class calculadora extends javax.swing.JFrame {
     public calculadora() {
         initComponents();
     }
+    
+    public void disable() {
+        lblResultado.setEnabled(false);
+        btnNum0.setEnabled(false);
+        btnNum1.setEnabled(false);
+        btnNum2.setEnabled(false);
+        btnNum3.setEnabled(false);
+        btnNum4.setEnabled(false);
+        btnNum5.setEnabled(false);
+        btnNum6.setEnabled(false);
+        btnNum7.setEnabled(false);
+        btnNum8.setEnabled(false);
+        btnNum9.setEnabled(false);
+        btnCancel.setEnabled(false);
+        btnDot.setEnabled(false);
+        btnPlus.setEnabled(false);
+        btnMinus.setEnabled(false);
+        btnMultiplication.setEnabled(false);
+        btnSplit.setEnabled(false);
+        btnEqual.setEnabled(false);
+        btnDelete.setEnabled(false);
+    }
+    
+    public void enable() {
+        lblResultado.setEnabled(true);
+        btnNum0.setEnabled(true);
+        btnNum1.setEnabled(true);
+        btnNum2.setEnabled(true);
+        btnNum3.setEnabled(true);
+        btnNum4.setEnabled(true);
+        btnNum5.setEnabled(true);
+        btnNum6.setEnabled(true);
+        btnNum7.setEnabled(true);
+        btnNum8.setEnabled(true);
+        btnNum9.setEnabled(true);
+        btnCancel.setEnabled(true);
+        btnDot.setEnabled(true);
+        btnPlus.setEnabled(true);
+        btnMinus.setEnabled(true);
+        btnMultiplication.setEnabled(true);
+        btnSplit.setEnabled(true);
+        btnEqual.setEnabled(true);
+        btnDelete.setEnabled(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,8 +80,8 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado = new javax.swing.JTextField();
         btnRadioOn = new javax.swing.JRadioButton();
         btnRadioOff = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         btnPlus = new javax.swing.JButton();
         btnNum7 = new javax.swing.JButton();
         btnNum8 = new javax.swing.JButton();
@@ -53,7 +97,7 @@ public class calculadora extends javax.swing.JFrame {
         btnNum3 = new javax.swing.JButton();
         btnDot = new javax.swing.JButton();
         btnNum0 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
+        btnEqual = new javax.swing.JButton();
 
         jButton3.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
         jButton3.setText("C");
@@ -82,6 +126,12 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setEditable(false);
         lblResultado.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         lblResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lblResultado.setFocusable(false);
+        lblResultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lblResultadoActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnRadioOn);
         btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
@@ -102,24 +152,24 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton1.setText("<");
-        jButton1.setToolTipText("");
-        jButton1.setMaximumSize(new java.awt.Dimension(24, 24));
-        jButton1.setMinimumSize(new java.awt.Dimension(24, 24));
-        jButton1.setPreferredSize(new java.awt.Dimension(24, 24));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnDelete.setText("<");
+        btnDelete.setToolTipText("");
+        btnDelete.setMaximumSize(new java.awt.Dimension(24, 24));
+        btnDelete.setMinimumSize(new java.awt.Dimension(24, 24));
+        btnDelete.setPreferredSize(new java.awt.Dimension(24, 24));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnDeleteActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton2.setText("C");
-        jButton2.setToolTipText("");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnCancel.setText("C");
+        btnCancel.setToolTipText("");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -258,12 +308,12 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton39.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton39.setText("=");
-        jButton39.setToolTipText("");
-        jButton39.addActionListener(new java.awt.event.ActionListener() {
+        btnEqual.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnEqual.setText("=");
+        btnEqual.setToolTipText("");
+        btnEqual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton39ActionPerformed(evt);
+                btnEqualActionPerformed(evt);
             }
         });
 
@@ -293,7 +343,7 @@ public class calculadora extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnNum8, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -304,7 +354,7 @@ public class calculadora extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(btnEqual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(btnNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -318,7 +368,7 @@ public class calculadora extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addComponent(btnRadioOff)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -331,8 +381,8 @@ public class calculadora extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnRadioOn)
@@ -360,7 +410,7 @@ public class calculadora extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -368,9 +418,9 @@ public class calculadora extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
@@ -447,21 +497,28 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setText(lblResultado.getText() + "0");
     }//GEN-LAST:event_btnNum0ActionPerformed
 
-    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+    private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton39ActionPerformed
+    }//GEN-LAST:event_btnEqualActionPerformed
 
     private void btnRadioOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOffActionPerformed
         // TODO add your handling code here:
+        disable(); // Desativa todos os botões
     }//GEN-LAST:event_btnRadioOffActionPerformed
 
     private void btnRadioOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOnActionPerformed
         // TODO add your handling code here:
+        enable(); // Ativa todos os botões
     }//GEN-LAST:event_btnRadioOnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        lblResultado.setText("");
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void lblResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblResultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblResultadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -499,7 +556,10 @@ public class calculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnDot;
+    private javax.swing.JButton btnEqual;
     private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnMultiplication;
     private javax.swing.JButton btnNum0;
@@ -517,12 +577,9 @@ public class calculadora extends javax.swing.JFrame {
     private javax.swing.JRadioButton btnRadioOn;
     private javax.swing.JButton btnSplit;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton5;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JTextField lblResultado;
