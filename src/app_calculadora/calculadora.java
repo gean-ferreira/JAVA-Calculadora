@@ -32,6 +32,7 @@ public class calculadora extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jToggleButton3 = new javax.swing.JToggleButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         lblResultado = new javax.swing.JTextField();
         btnRadioOn = new javax.swing.JRadioButton();
         btnRadioOff = new javax.swing.JRadioButton();
@@ -82,14 +83,27 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         lblResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        buttonGroup1.add(btnRadioOn);
+        btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 8)); // NOI18N
         btnRadioOn.setText("ON");
+        btnRadioOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRadioOnActionPerformed(evt);
+            }
+        });
 
-        btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        buttonGroup1.add(btnRadioOff);
+        btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 8)); // NOI18N
         btnRadioOff.setText("OFF");
+        btnRadioOff.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRadioOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRadioOffActionPerformed(evt);
+            }
+        });
 
-        jButton1.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton1.setText("<--");
+        jButton1.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton1.setText("<");
         jButton1.setToolTipText("");
         jButton1.setMaximumSize(new java.awt.Dimension(24, 24));
         jButton1.setMinimumSize(new java.awt.Dimension(24, 24));
@@ -100,11 +114,11 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton2.setText("C");
         jButton2.setToolTipText("");
 
-        jButton4.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton4.setText("+");
         jButton4.setToolTipText("");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -113,8 +127,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton24.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton24.setText("+");
+        jButton24.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton24.setText("7");
         jButton24.setToolTipText("");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,8 +136,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton25.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton25.setText("+");
+        jButton25.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton25.setText("8");
         jButton25.setToolTipText("");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,8 +145,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton26.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton26.setText("+");
+        jButton26.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton26.setText("9");
         jButton26.setToolTipText("");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +154,7 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton27.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton27.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton27.setText("-");
         jButton27.setToolTipText("");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +163,7 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton28.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton28.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton28.setText("*");
         jButton28.setToolTipText("");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -158,8 +172,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton29.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton29.setText("+");
+        jButton29.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton29.setText("4");
         jButton29.setToolTipText("");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,8 +181,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton30.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton30.setText("+");
+        jButton30.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton30.setText("5");
         jButton30.setToolTipText("");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,8 +190,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton31.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton31.setText("+");
+        jButton31.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton31.setText("6");
         jButton31.setToolTipText("");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +199,7 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton32.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton32.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton32.setText("/");
         jButton32.setToolTipText("");
         jButton32.addActionListener(new java.awt.event.ActionListener() {
@@ -194,8 +208,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton33.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton33.setText("+");
+        jButton33.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton33.setText("2");
         jButton33.setToolTipText("");
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,8 +217,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton34.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton34.setText("+");
+        jButton34.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton34.setText("1");
         jButton34.setToolTipText("");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,8 +226,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton35.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton35.setText("+");
+        jButton35.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton35.setText("3");
         jButton35.setToolTipText("");
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,8 +235,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton36.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton36.setText("+");
+        jButton36.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton36.setText(".");
         jButton36.setToolTipText("");
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,8 +244,8 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton38.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
-        jButton38.setText("+");
+        jButton38.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        jButton38.setText("0");
         jButton38.setToolTipText("");
         jButton38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,7 +253,7 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton39.setFont(new java.awt.Font("Fira Code Medium", 1, 18)); // NOI18N
+        jButton39.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton39.setText("=");
         jButton39.setToolTipText("");
         jButton39.addActionListener(new java.awt.event.ActionListener() {
@@ -253,54 +267,53 @@ public class calculadora extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResultado)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRadioOff)
-                            .addComponent(btnRadioOn))
-                        .addGap(12, 12, 12)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(8, 8, 8))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButton39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRadioOn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRadioOff))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -308,17 +321,17 @@ public class calculadora extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnRadioOn)
-                        .addGap(8, 8, 8)
-                        .addComponent(btnRadioOff))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnRadioOn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRadioOff)))
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -416,6 +429,14 @@ public class calculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton39ActionPerformed
 
+    private void btnRadioOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOffActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRadioOffActionPerformed
+
+    private void btnRadioOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRadioOnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -454,6 +475,7 @@ public class calculadora extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton btnRadioOff;
     private javax.swing.JRadioButton btnRadioOn;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton15;
