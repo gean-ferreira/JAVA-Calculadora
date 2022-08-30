@@ -38,21 +38,21 @@ public class calculadora extends javax.swing.JFrame {
         btnRadioOff = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
+        btnPlus = new javax.swing.JButton();
+        btnNum7 = new javax.swing.JButton();
+        btnNum8 = new javax.swing.JButton();
+        btnNum9 = new javax.swing.JButton();
+        btnMinus = new javax.swing.JButton();
+        btnMultiplication = new javax.swing.JButton();
+        btnNum4 = new javax.swing.JButton();
+        btnNum5 = new javax.swing.JButton();
+        btnNum6 = new javax.swing.JButton();
+        btnSplit = new javax.swing.JButton();
+        btnNum2 = new javax.swing.JButton();
+        btnNum1 = new javax.swing.JButton();
+        btnNum3 = new javax.swing.JButton();
+        btnDot = new javax.swing.JButton();
+        btnNum0 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
 
         jButton3.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
@@ -84,7 +84,7 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         buttonGroup1.add(btnRadioOn);
-        btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 8)); // NOI18N
+        btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOn.setText("ON");
         btnRadioOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnRadioOff);
-        btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 8)); // NOI18N
+        btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOff.setText("OFF");
         btnRadioOff.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnRadioOff.addActionListener(new java.awt.event.ActionListener() {
@@ -117,139 +117,144 @@ public class calculadora extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         jButton2.setText("C");
         jButton2.setToolTipText("");
-
-        jButton4.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton4.setText("+");
-        jButton4.setToolTipText("");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        jButton24.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton24.setText("7");
-        jButton24.setToolTipText("");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        btnPlus.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnPlus.setText("+");
+        btnPlus.setToolTipText("");
+        btnPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                btnPlusActionPerformed(evt);
             }
         });
 
-        jButton25.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton25.setText("8");
-        jButton25.setToolTipText("");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        btnNum7.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum7.setText("7");
+        btnNum7.setToolTipText("");
+        btnNum7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                btnNum7ActionPerformed(evt);
             }
         });
 
-        jButton26.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton26.setText("9");
-        jButton26.setToolTipText("");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        btnNum8.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum8.setText("8");
+        btnNum8.setToolTipText("");
+        btnNum8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                btnNum8ActionPerformed(evt);
             }
         });
 
-        jButton27.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton27.setText("-");
-        jButton27.setToolTipText("");
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
+        btnNum9.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum9.setText("9");
+        btnNum9.setToolTipText("");
+        btnNum9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
+                btnNum9ActionPerformed(evt);
             }
         });
 
-        jButton28.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton28.setText("*");
-        jButton28.setToolTipText("");
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        btnMinus.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnMinus.setText("-");
+        btnMinus.setToolTipText("");
+        btnMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                btnMinusActionPerformed(evt);
             }
         });
 
-        jButton29.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton29.setText("4");
-        jButton29.setToolTipText("");
-        jButton29.addActionListener(new java.awt.event.ActionListener() {
+        btnMultiplication.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnMultiplication.setText("*");
+        btnMultiplication.setToolTipText("");
+        btnMultiplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton29ActionPerformed(evt);
+                btnMultiplicationActionPerformed(evt);
             }
         });
 
-        jButton30.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton30.setText("5");
-        jButton30.setToolTipText("");
-        jButton30.addActionListener(new java.awt.event.ActionListener() {
+        btnNum4.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum4.setText("4");
+        btnNum4.setToolTipText("");
+        btnNum4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton30ActionPerformed(evt);
+                btnNum4ActionPerformed(evt);
             }
         });
 
-        jButton31.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton31.setText("6");
-        jButton31.setToolTipText("");
-        jButton31.addActionListener(new java.awt.event.ActionListener() {
+        btnNum5.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum5.setText("5");
+        btnNum5.setToolTipText("");
+        btnNum5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton31ActionPerformed(evt);
+                btnNum5ActionPerformed(evt);
             }
         });
 
-        jButton32.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton32.setText("/");
-        jButton32.setToolTipText("");
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
+        btnNum6.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum6.setText("6");
+        btnNum6.setToolTipText("");
+        btnNum6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
+                btnNum6ActionPerformed(evt);
             }
         });
 
-        jButton33.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton33.setText("2");
-        jButton33.setToolTipText("");
-        jButton33.addActionListener(new java.awt.event.ActionListener() {
+        btnSplit.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnSplit.setText("/");
+        btnSplit.setToolTipText("");
+        btnSplit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton33ActionPerformed(evt);
+                btnSplitActionPerformed(evt);
             }
         });
 
-        jButton34.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton34.setText("1");
-        jButton34.setToolTipText("");
-        jButton34.addActionListener(new java.awt.event.ActionListener() {
+        btnNum2.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum2.setText("2");
+        btnNum2.setToolTipText("");
+        btnNum2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton34ActionPerformed(evt);
+                btnNum2ActionPerformed(evt);
             }
         });
 
-        jButton35.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton35.setText("3");
-        jButton35.setToolTipText("");
-        jButton35.addActionListener(new java.awt.event.ActionListener() {
+        btnNum1.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum1.setText("1");
+        btnNum1.setToolTipText("");
+        btnNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton35ActionPerformed(evt);
+                btnNum1ActionPerformed(evt);
             }
         });
 
-        jButton36.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton36.setText(".");
-        jButton36.setToolTipText("");
-        jButton36.addActionListener(new java.awt.event.ActionListener() {
+        btnNum3.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum3.setText("3");
+        btnNum3.setToolTipText("");
+        btnNum3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton36ActionPerformed(evt);
+                btnNum3ActionPerformed(evt);
             }
         });
 
-        jButton38.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
-        jButton38.setText("0");
-        jButton38.setToolTipText("");
-        jButton38.addActionListener(new java.awt.event.ActionListener() {
+        btnDot.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnDot.setText(".");
+        btnDot.setToolTipText("");
+        btnDot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton38ActionPerformed(evt);
+                btnDotActionPerformed(evt);
+            }
+        });
+
+        btnNum0.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
+        btnNum0.setText("0");
+        btnNum0.setToolTipText("");
+        btnNum0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNum0ActionPerformed(evt);
             }
         });
 
@@ -272,48 +277,50 @@ public class calculadora extends javax.swing.JFrame {
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMultiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(15, 15, 15)
+                                        .addComponent(btnRadioOn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                                    .addComponent(btnNum8, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
                                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(jButton39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(btnSplit, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRadioOn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRadioOff))
+                        .addComponent(btnRadioOff)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -326,33 +333,33 @@ public class calculadora extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnRadioOn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnRadioOff)))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMultiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSplit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
@@ -362,68 +369,83 @@ public class calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "+");
+    }//GEN-LAST:event_btnPlusActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+    private void btnNum7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "7");
+    }//GEN-LAST:event_btnNum7ActionPerformed
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+    private void btnNum8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "8");
+    }//GEN-LAST:event_btnNum8ActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+    private void btnNum9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "9");
+    }//GEN-LAST:event_btnNum9ActionPerformed
 
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "-");
+    }//GEN-LAST:event_btnMinusActionPerformed
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "*");
+    }//GEN-LAST:event_btnMultiplicationActionPerformed
 
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+    private void btnNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton29ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "4");
+    }//GEN-LAST:event_btnNum4ActionPerformed
 
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+    private void btnNum5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton30ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "5");
+    }//GEN-LAST:event_btnNum5ActionPerformed
 
-    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+    private void btnNum6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton31ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "6");
+    }//GEN-LAST:event_btnNum6ActionPerformed
 
-    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+    private void btnSplitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSplitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton32ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "/");
+    }//GEN-LAST:event_btnSplitActionPerformed
 
-    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+    private void btnNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton33ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "2");
+    }//GEN-LAST:event_btnNum2ActionPerformed
 
-    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+    private void btnNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton34ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "1");
+    }//GEN-LAST:event_btnNum1ActionPerformed
 
-    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+    private void btnNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton35ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "3");
+    }//GEN-LAST:event_btnNum3ActionPerformed
 
-    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+    private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton36ActionPerformed
+        lblResultado.setText(lblResultado.getText() + ".");
+    }//GEN-LAST:event_btnDotActionPerformed
 
-    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+    private void btnNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum0ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38ActionPerformed
+        lblResultado.setText(lblResultado.getText() + "0");
+    }//GEN-LAST:event_btnNum0ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         // TODO add your handling code here:
@@ -436,6 +458,10 @@ public class calculadora extends javax.swing.JFrame {
     private void btnRadioOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRadioOnActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -473,30 +499,30 @@ public class calculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDot;
+    private javax.swing.JButton btnMinus;
+    private javax.swing.JButton btnMultiplication;
+    private javax.swing.JButton btnNum0;
+    private javax.swing.JButton btnNum1;
+    private javax.swing.JButton btnNum2;
+    private javax.swing.JButton btnNum3;
+    private javax.swing.JButton btnNum4;
+    private javax.swing.JButton btnNum5;
+    private javax.swing.JButton btnNum6;
+    private javax.swing.JButton btnNum7;
+    private javax.swing.JButton btnNum8;
+    private javax.swing.JButton btnNum9;
+    private javax.swing.JButton btnPlus;
     private javax.swing.JRadioButton btnRadioOff;
     private javax.swing.JRadioButton btnRadioOn;
+    private javax.swing.JButton btnSplit;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JTextField lblResultado;
