@@ -433,6 +433,17 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        int length = lblResultado.getText().length();
+        int number = lblResultado.getText().length() - 1;
+        String store; // Variável que armazenará o valor formatado
+        
+        if (length > 0) {
+            // StringBuilder cria strings, porém objetos da classe StringBuilder, e que podem ser modificadas
+            StringBuilder back = new StringBuilder(lblResultado.getText());
+            back.deleteCharAt(number); 
+            store = back.toString(); // tornar tipo primitivo (string)
+            lblResultado.setText(store);
+        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
