@@ -91,7 +91,6 @@ public class calculadora extends javax.swing.JFrame {
                 ans = num / Double.parseDouble(lblResultado.getText());
                 break;
         }
-        System.err.println(num + " " + ans);
         lblResultado.setText(Double.toString(ans));
     }
     
@@ -510,12 +509,18 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "-");
+        calculation = 2;
+        num = Double.parseDouble(lblResultado.getText());
+        lblMemory.setText(lblResultado.getText() + " -");
+        lblResultado.setText("");
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "*");
+        calculation = 3;
+        num = Double.parseDouble(lblResultado.getText());
+        lblMemory.setText(lblResultado.getText() + " *");
+        lblResultado.setText("");
     }//GEN-LAST:event_btnMultiplicationActionPerformed
 
     private void btnNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum4ActionPerformed
@@ -535,7 +540,10 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnSplitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSplitActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "/");
+        calculation = 4;
+        num = Double.parseDouble(lblResultado.getText());
+        lblMemory.setText(lblResultado.getText() + " /");
+        lblResultado.setText("");
     }//GEN-LAST:event_btnSplitActionPerformed
 
     private void btnNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum2ActionPerformed
