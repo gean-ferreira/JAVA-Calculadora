@@ -15,7 +15,7 @@ public class calculadora extends javax.swing.JFrame {
     // ans = resposta quando o usuário apertar o botão de igual
     double num, ans; 
     int calculation; // Variável que seta as operações lógicas
-
+    
     /**
      * Creates new form calculadora
      */
@@ -78,13 +78,23 @@ public class calculadora extends javax.swing.JFrame {
     
     public void arithmetic_operation() {
         switch(calculation) {
-            case 1:
+            case 1: // Sum
                 ans = num + Double.parseDouble(lblResultado.getText());
-                lblResultado.setText(Double.toString(ans));
+                break;
+            case 2: // Sub
+                ans = num - Double.parseDouble(lblResultado.getText());
+                break;
+            case 3: // Mult
+                ans = num * Double.parseDouble(lblResultado.getText());
+                break;
+            case 4: // Div
+                ans = num / Double.parseDouble(lblResultado.getText());
                 break;
         }
+        System.err.println(num + " " + ans);
+        lblResultado.setText(Double.toString(ans));
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -477,6 +487,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
+        calculation = 1;
         num = Double.parseDouble(lblResultado.getText());
         lblMemory.setText(lblResultado.getText() + " +");
         lblResultado.setText("");
@@ -554,6 +565,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
         // TODO add your handling code here:
+        arithmetic_operation();
     }//GEN-LAST:event_btnEqualActionPerformed
 
     private void btnRadioOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOffActionPerformed
