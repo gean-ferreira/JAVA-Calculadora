@@ -17,7 +17,7 @@ public class calculadora extends javax.swing.JFrame {
     int calculation; // Variável que seta as operações lógicas
     
     /**
-     * Creates new form calculadora
+     * Creates new form calculator
      */
     public calculadora() {
         initComponents();
@@ -574,6 +574,7 @@ public class calculadora extends javax.swing.JFrame {
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
         // TODO add your handling code here:
         arithmetic_operation();
+        num = 0;
     }//GEN-LAST:event_btnEqualActionPerformed
 
     private void btnRadioOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOffActionPerformed
@@ -589,6 +590,7 @@ public class calculadora extends javax.swing.JFrame {
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
         lblResultado.setText("");
+        lblMemory.setText("");
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void lblResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblResultadoActionPerformed
