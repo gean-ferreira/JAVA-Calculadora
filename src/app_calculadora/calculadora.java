@@ -15,6 +15,7 @@ public class calculadora extends javax.swing.JFrame {
     // ans = resposta quando o usuário apertar o botão de igual
     double num, ans; 
     int calculation; // Variável que seta as operações lógicas
+    boolean isStarting = true;
     
     /**
      * Creates new form calculator
@@ -22,6 +23,7 @@ public class calculadora extends javax.swing.JFrame {
     public calculadora() {
         initComponents();
         disable();
+        System.err.println(num);
     }
     
     public void disable() {
@@ -356,7 +358,6 @@ public class calculadora extends javax.swing.JFrame {
         lblMemory.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
         lblMemory.setForeground(new java.awt.Color(204, 51, 0));
         lblMemory.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblMemory.setText("12123123");
         lblMemory.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -487,8 +488,13 @@ public class calculadora extends javax.swing.JFrame {
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
         calculation = 1;
-        num = Double.parseDouble(lblResultado.getText());
-        lblMemory.setText(lblResultado.getText() + " +");
+        if(isStarting){ // Caso a aplicação esteja iniciando
+            num = Double.parseDouble(lblResultado.getText());
+            isStarting = false;
+        } else {
+            num = num + Double.parseDouble(lblResultado.getText());
+        }
+        lblMemory.setText(num + " +");
         lblResultado.setText("");
     }//GEN-LAST:event_btnPlusActionPerformed
 
@@ -510,16 +516,29 @@ public class calculadora extends javax.swing.JFrame {
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
         calculation = 2;
-        num = Double.parseDouble(lblResultado.getText());
-        lblMemory.setText(lblResultado.getText() + " -");
-        lblResultado.setText("");
+        System.out.println(lblResultado.getText().isEmpty());
+        if (!lblResultado.getText().isEmpty()) {
+            if(isStarting){ // Caso a aplicação esteja iniciando
+            num = Double.parseDouble(lblResultado.getText());
+            isStarting = false;
+            } else {
+                num = num - Double.parseDouble(lblResultado.getText());
+            }
+            lblMemory.setText(num + " -");
+            lblResultado.setText("");
+        }
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
         // TODO add your handling code here:
         calculation = 3;
-        num = Double.parseDouble(lblResultado.getText());
-        lblMemory.setText(lblResultado.getText() + " *");
+        if(isStarting){ // Caso a aplicação esteja iniciando
+            num = Double.parseDouble(lblResultado.getText());
+            isStarting = false;
+        } else {
+            num = num * Double.parseDouble(lblResultado.getText());
+        }
+        lblMemory.setText(num + " *");
         lblResultado.setText("");
     }//GEN-LAST:event_btnMultiplicationActionPerformed
 
@@ -541,8 +560,13 @@ public class calculadora extends javax.swing.JFrame {
     private void btnSplitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSplitActionPerformed
         // TODO add your handling code here:
         calculation = 4;
-        num = Double.parseDouble(lblResultado.getText());
-        lblMemory.setText(lblResultado.getText() + " /");
+        if(isStarting){ // Caso a aplicação esteja iniciando
+            num = Double.parseDouble(lblResultado.getText());
+            isStarting = false;
+        } else {
+            num = num / Double.parseDouble(lblResultado.getText());
+        }
+        lblMemory.setText(num + " /");
         lblResultado.setText("");
     }//GEN-LAST:event_btnSplitActionPerformed
 

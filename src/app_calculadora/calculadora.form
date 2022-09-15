@@ -487,7 +487,6 @@
           <Color blue="0" green="33" red="cc" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="12123123"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
