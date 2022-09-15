@@ -23,9 +23,9 @@ public class calculadora extends javax.swing.JFrame {
     public calculadora() {
         initComponents();
         disable();
-        System.err.println(num);
     }
     
+    // Desliga a calculadora desabilitando todos os botões, menos o on
     public void disable() {
         btnRadioOn.setEnabled(true); // ON button
         btnRadioOff.setEnabled(false); // OFF button
@@ -52,6 +52,7 @@ public class calculadora extends javax.swing.JFrame {
         btnDelete.setEnabled(false);
     }
     
+    // Liga a calculadora habilitando todos os botões e desabilita o on
     public void enable() {
         btnRadioOn.setEnabled(false); // ON button
         btnRadioOff.setEnabled(true); // OFF button
@@ -78,6 +79,16 @@ public class calculadora extends javax.swing.JFrame {
         btnDelete.setEnabled(true);
     }
     
+    // Método possui o parâmetro que irá setar o valor da tela da calculadora
+    public void cancel(String hasResult) {
+        lblResultado.setText(hasResult);
+        lblMemory.setText("");
+        num = 0;
+        ans = 0;
+        isStarting = true;
+        calculation = 0;
+    }
+    
     public void arithmetic_operation() {
         switch(calculation) {
             case 1: // Sum
@@ -93,7 +104,7 @@ public class calculadora extends javax.swing.JFrame {
                 ans = num / Double.parseDouble(lblResultado.getText());
                 break;
         }
-        lblResultado.setText(Double.toString(ans));
+        cancel(Double.toString(ans));
     }
     
     /**
@@ -516,17 +527,14 @@ public class calculadora extends javax.swing.JFrame {
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
         calculation = 2;
-        System.out.println(lblResultado.getText().isEmpty());
-        if (!lblResultado.getText().isEmpty()) {
-            if(isStarting){ // Caso a aplicação esteja iniciando
+        if(isStarting){ // Caso a aplicação esteja iniciando
             num = Double.parseDouble(lblResultado.getText());
             isStarting = false;
-            } else {
-                num = num - Double.parseDouble(lblResultado.getText());
-            }
-            lblMemory.setText(num + " -");
-            lblResultado.setText("");
+        } else {
+            num = num - Double.parseDouble(lblResultado.getText());
         }
+        lblMemory.setText(num + " -");
+        lblResultado.setText("");
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
@@ -613,8 +621,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText("");
-        lblMemory.setText("");
+        cancel("");
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void lblResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblResultadoActionPerformed
