@@ -16,6 +16,7 @@ public class calculadora extends javax.swing.JFrame {
     double num, ans; 
     int calculation; // Variável que seta as operações lógicas
     boolean isStarting = true;
+    String strCalculation;
     
     /**
      * Creates new form calculator
@@ -82,7 +83,8 @@ public class calculadora extends javax.swing.JFrame {
     // Método possui o parâmetro que irá setar o valor da tela da calculadora
     public void cancel(String hasResult) {
         lblResultado.setText(hasResult);
-        lblMemory.setText("");
+        lblValueMemory.setText("");
+        lblOperationMemory.setText("");
         num = 0;
         ans = 0;
         isStarting = true;
@@ -105,6 +107,12 @@ public class calculadora extends javax.swing.JFrame {
                 break;
         }
         cancel(Double.toString(ans));
+    }
+    
+    public void set_LblOperationMemory(String strArithmeticOperation) {
+        if (!lblValueMemory.getText().isEmpty()) {
+            lblOperationMemory.setText(strArithmeticOperation);
+        }
     }
     
     /**
@@ -143,7 +151,8 @@ public class calculadora extends javax.swing.JFrame {
         btnDot = new javax.swing.JButton();
         btnNum0 = new javax.swing.JButton();
         btnEqual = new javax.swing.JButton();
-        lblMemory = new javax.swing.JLabel();
+        lblValueMemory = new javax.swing.JLabel();
+        lblOperationMemory = new javax.swing.JLabel();
 
         jButton3.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
         jButton3.setText("C");
@@ -369,10 +378,15 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
-        lblMemory.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
-        lblMemory.setForeground(new java.awt.Color(204, 51, 0));
-        lblMemory.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblMemory.setToolTipText("");
+        lblValueMemory.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
+        lblValueMemory.setForeground(new java.awt.Color(204, 51, 0));
+        lblValueMemory.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblValueMemory.setToolTipText("");
+
+        lblOperationMemory.setFont(new java.awt.Font("Fira Code Medium", 1, 13)); // NOI18N
+        lblOperationMemory.setForeground(new java.awt.Color(204, 51, 0));
+        lblOperationMemory.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOperationMemory.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -432,16 +446,21 @@ public class calculadora extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMemory, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblResultado))))
+                        .addComponent(lblResultado))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblValueMemory)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblOperationMemory)))
                 .addGap(8, 8, 8))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(lblMemory, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblOperationMemory, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblValueMemory, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -477,7 +496,7 @@ public class calculadora extends javax.swing.JFrame {
                     .addComponent(btnNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -502,14 +521,18 @@ public class calculadora extends javax.swing.JFrame {
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
         calculation = 1;
-        if(isStarting){ // Caso a aplicação esteja iniciando
-            num = Double.parseDouble(lblResultado.getText());
-            isStarting = false;
-        } else {
-            num = num + Double.parseDouble(lblResultado.getText());
+        if (!lblResultado.getText().isEmpty()) { // Varifica se há algum valor no label antes de fazer alguma operação
+            if(isStarting){ // Caso a aplicação esteja iniciando
+            System.out.println();
+                num = Double.parseDouble(lblResultado.getText());
+                isStarting = false;
+            } else {
+                num = num + Double.parseDouble(lblResultado.getText());
+            }
+            lblValueMemory.setText(String.valueOf(num));
+            lblResultado.setText("");
         }
-        lblMemory.setText(num + " +");
-        lblResultado.setText("");
+        set_LblOperationMemory("+");
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnNum7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum7ActionPerformed
@@ -530,27 +553,33 @@ public class calculadora extends javax.swing.JFrame {
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
         calculation = 2;
-        if(isStarting){ // Caso a aplicação esteja iniciando
-            num = Double.parseDouble(lblResultado.getText());
-            isStarting = false;
-        } else {
-            num = num - Double.parseDouble(lblResultado.getText());
+        if (!lblResultado.getText().isEmpty()) {
+            if(isStarting){ // Caso a aplicação esteja iniciando
+                num = Double.parseDouble(lblResultado.getText());
+                isStarting = false;
+            } else {
+                num = num - Double.parseDouble(lblResultado.getText());
+            }
+            lblValueMemory.setText(String.valueOf(num));
+            lblResultado.setText("");
         }
-        lblMemory.setText(num + " -");
-        lblResultado.setText("");
+        set_LblOperationMemory("-");
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
         // TODO add your handling code here:
         calculation = 3;
-        if(isStarting){ // Caso a aplicação esteja iniciando
-            num = Double.parseDouble(lblResultado.getText());
-            isStarting = false;
-        } else {
-            num = num * Double.parseDouble(lblResultado.getText());
+        if (!lblResultado.getText().isEmpty()) {
+            if(isStarting){ // Caso a aplicação esteja iniciando
+                num = Double.parseDouble(lblResultado.getText());
+                isStarting = false;
+            } else {
+                num = num * Double.parseDouble(lblResultado.getText());
+            }
+            lblValueMemory.setText(String.valueOf(num));
+            lblResultado.setText("");
         }
-        lblMemory.setText(num + " *");
-        lblResultado.setText("");
+        set_LblOperationMemory("*");
     }//GEN-LAST:event_btnMultiplicationActionPerformed
 
     private void btnNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum4ActionPerformed
@@ -571,14 +600,17 @@ public class calculadora extends javax.swing.JFrame {
     private void btnSplitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSplitActionPerformed
         // TODO add your handling code here:
         calculation = 4;
-        if(isStarting){ // Caso a aplicação esteja iniciando
-            num = Double.parseDouble(lblResultado.getText());
-            isStarting = false;
-        } else {
-            num = num / Double.parseDouble(lblResultado.getText());
+        if (!lblResultado.getText().isEmpty()) {
+            if(isStarting){ // Caso a aplicação esteja iniciando
+                num = Double.parseDouble(lblResultado.getText());
+                isStarting = false;
+            } else {
+                num = num / Double.parseDouble(lblResultado.getText());
+            }
+            lblValueMemory.setText(String.valueOf(num));
+            lblResultado.setText("");
         }
-        lblMemory.setText(num + " /");
-        lblResultado.setText("");
+        set_LblOperationMemory("/");
     }//GEN-LAST:event_btnSplitActionPerformed
 
     private void btnNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum2ActionPerformed
@@ -693,7 +725,8 @@ public class calculadora extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JLabel lblMemory;
+    private javax.swing.JLabel lblOperationMemory;
     private javax.swing.JTextField lblResultado;
+    private javax.swing.JLabel lblValueMemory;
     // End of variables declaration//GEN-END:variables
 }
