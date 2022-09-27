@@ -172,6 +172,7 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setEditable(false);
         lblResultado.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         lblResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lblResultado.setToolTipText(null);
         lblResultado.setFocusable(false);
         lblResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +183,7 @@ public class calculadora extends javax.swing.JFrame {
         buttonGroup1.add(btnRadioOn);
         btnRadioOn.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOn.setText("ON");
+        btnRadioOn.setToolTipText(null);
         btnRadioOn.setEnabled(false);
         btnRadioOn.setFocusable(false);
         btnRadioOn.addActionListener(new java.awt.event.ActionListener() {
@@ -193,6 +195,7 @@ public class calculadora extends javax.swing.JFrame {
         buttonGroup1.add(btnRadioOff);
         btnRadioOff.setFont(new java.awt.Font("Fira Code Medium", 1, 10)); // NOI18N
         btnRadioOff.setText("OFF");
+        btnRadioOff.setToolTipText(null);
         btnRadioOff.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnRadioOff.setEnabled(false);
         btnRadioOff.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +206,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnDelete.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnDelete.setText("<");
-        btnDelete.setToolTipText("");
+        btnDelete.setToolTipText(null);
         btnDelete.setMaximumSize(new java.awt.Dimension(24, 24));
         btnDelete.setMinimumSize(new java.awt.Dimension(24, 24));
         btnDelete.setPreferredSize(new java.awt.Dimension(24, 24));
@@ -215,7 +218,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnCancel.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnCancel.setText("C");
-        btnCancel.setToolTipText("");
+        btnCancel.setToolTipText(null);
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -224,7 +227,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnPlus.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnPlus.setText("+");
-        btnPlus.setToolTipText("");
+        btnPlus.setToolTipText(null);
         btnPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlusActionPerformed(evt);
@@ -233,7 +236,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum7.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum7.setText("7");
-        btnNum7.setToolTipText("");
+        btnNum7.setToolTipText(null);
         btnNum7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum7ActionPerformed(evt);
@@ -242,7 +245,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum8.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum8.setText("8");
-        btnNum8.setToolTipText("");
+        btnNum8.setToolTipText(null);
         btnNum8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum8ActionPerformed(evt);
@@ -251,7 +254,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum9.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum9.setText("9");
-        btnNum9.setToolTipText("");
+        btnNum9.setToolTipText(null);
         btnNum9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum9ActionPerformed(evt);
@@ -260,7 +263,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnMinus.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnMinus.setText("-");
-        btnMinus.setToolTipText("");
+        btnMinus.setToolTipText(null);
         btnMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMinusActionPerformed(evt);
@@ -269,7 +272,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnMultiplication.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnMultiplication.setText("*");
-        btnMultiplication.setToolTipText("");
+        btnMultiplication.setToolTipText(null);
         btnMultiplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMultiplicationActionPerformed(evt);
@@ -278,7 +281,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum4.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum4.setText("4");
-        btnNum4.setToolTipText("");
+        btnNum4.setToolTipText(null);
         btnNum4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum4ActionPerformed(evt);
@@ -287,7 +290,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum5.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum5.setText("5");
-        btnNum5.setToolTipText("");
+        btnNum5.setToolTipText(null);
         btnNum5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum5ActionPerformed(evt);
@@ -296,7 +299,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum6.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum6.setText("6");
-        btnNum6.setToolTipText("");
+        btnNum6.setToolTipText(null);
         btnNum6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum6ActionPerformed(evt);
@@ -305,7 +308,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnSplit.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnSplit.setText("/");
-        btnSplit.setToolTipText("");
+        btnSplit.setToolTipText(null);
         btnSplit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSplitActionPerformed(evt);
@@ -314,7 +317,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum2.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum2.setText("2");
-        btnNum2.setToolTipText("");
+        btnNum2.setToolTipText(null);
         btnNum2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum2ActionPerformed(evt);
@@ -323,7 +326,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum1.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum1.setText("1");
-        btnNum1.setToolTipText("");
+        btnNum1.setToolTipText(null);
         btnNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum1ActionPerformed(evt);
@@ -332,7 +335,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum3.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum3.setText("3");
-        btnNum3.setToolTipText("");
+        btnNum3.setToolTipText(null);
         btnNum3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum3ActionPerformed(evt);
@@ -341,7 +344,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnDot.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnDot.setText(".");
-        btnDot.setToolTipText("");
+        btnDot.setToolTipText(null);
         btnDot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDotActionPerformed(evt);
@@ -350,7 +353,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnNum0.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnNum0.setText("0");
-        btnNum0.setToolTipText("");
+        btnNum0.setToolTipText(null);
         btnNum0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNum0ActionPerformed(evt);
@@ -359,7 +362,7 @@ public class calculadora extends javax.swing.JFrame {
 
         btnEqual.setFont(new java.awt.Font("Fira Code Medium", 1, 24)); // NOI18N
         btnEqual.setText("=");
-        btnEqual.setToolTipText("");
+        btnEqual.setToolTipText(null);
         btnEqual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEqualActionPerformed(evt);
