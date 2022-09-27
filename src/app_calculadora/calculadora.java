@@ -109,6 +109,7 @@ public class calculadora extends javax.swing.JFrame {
         cancel(Double.toString(ans));
     }
     
+    // Método verifica se há valores em memória e adiciona em memória a operação aritmética clicada
     public void set_LblOperationMemory(String strArithmeticOperation) {
         if (!lblValueMemory.getText().isEmpty()) {
             lblOperationMemory.setText(strArithmeticOperation);
@@ -638,10 +639,12 @@ public class calculadora extends javax.swing.JFrame {
         lblResultado.setText(lblResultado.getText() + "0");
     }//GEN-LAST:event_btnNum0ActionPerformed
 
+    // O botão de igual apenas funcionará caso haja valor na tela e em memória
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
-        // TODO add your handling code here:
-        arithmetic_operation();
-        num = 0;
+        if (!lblValueMemory.getText().isEmpty() && !lblResultado.getText().isEmpty()) {
+            arithmetic_operation();
+            num = 0;
+        }
     }//GEN-LAST:event_btnEqualActionPerformed
 
     private void btnRadioOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioOffActionPerformed
