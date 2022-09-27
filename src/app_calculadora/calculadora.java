@@ -635,7 +635,9 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + ".");
+        if (!lblResultado.getText().contains(".")) {
+            set_lblResultado(".");
+        }
     }//GEN-LAST:event_btnDotActionPerformed
 
     private void btnNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum0ActionPerformed
