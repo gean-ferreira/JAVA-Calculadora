@@ -110,10 +110,14 @@ public class calculadora extends javax.swing.JFrame {
     }
     
     // Método verifica se há valores em memória e adiciona em memória a operação aritmética clicada
-    public void set_LblOperationMemory(String strArithmeticOperation) {
+    public void set_lblOperationMemory(String strArithmeticOperation) {
         if (!lblValueMemory.getText().isEmpty()) {
             lblOperationMemory.setText(strArithmeticOperation);
         }
+    }
+    
+    public void set_lblResultado(String numeroString) {
+        lblResultado.setText(lblResultado.getText() + numeroString);
     }
     
     /**
@@ -533,22 +537,22 @@ public class calculadora extends javax.swing.JFrame {
             lblValueMemory.setText(String.valueOf(num));
             lblResultado.setText("");
         }
-        set_LblOperationMemory("+");
+        set_lblOperationMemory("+");
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnNum7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum7ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "7");
+        set_lblResultado("7");
     }//GEN-LAST:event_btnNum7ActionPerformed
 
     private void btnNum8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum8ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "8");
+        set_lblResultado("8");
     }//GEN-LAST:event_btnNum8ActionPerformed
 
     private void btnNum9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum9ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "9");
+        set_lblResultado("9");
     }//GEN-LAST:event_btnNum9ActionPerformed
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
@@ -564,7 +568,7 @@ public class calculadora extends javax.swing.JFrame {
             lblValueMemory.setText(String.valueOf(num));
             lblResultado.setText("");
         }
-        set_LblOperationMemory("-");
+        set_lblOperationMemory("-");
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicationActionPerformed
@@ -580,22 +584,22 @@ public class calculadora extends javax.swing.JFrame {
             lblValueMemory.setText(String.valueOf(num));
             lblResultado.setText("");
         }
-        set_LblOperationMemory("*");
+        set_lblOperationMemory("*");
     }//GEN-LAST:event_btnMultiplicationActionPerformed
 
     private void btnNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum4ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "4");
+        set_lblResultado("4");
     }//GEN-LAST:event_btnNum4ActionPerformed
 
     private void btnNum5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum5ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "5");
+        set_lblResultado("5");
     }//GEN-LAST:event_btnNum5ActionPerformed
 
     private void btnNum6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum6ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "6");
+        set_lblResultado("6");
     }//GEN-LAST:event_btnNum6ActionPerformed
 
     private void btnSplitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSplitActionPerformed
@@ -611,22 +615,22 @@ public class calculadora extends javax.swing.JFrame {
             lblValueMemory.setText(String.valueOf(num));
             lblResultado.setText("");
         }
-        set_LblOperationMemory("/");
+        set_lblOperationMemory("/");
     }//GEN-LAST:event_btnSplitActionPerformed
 
     private void btnNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum2ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "2");
+        set_lblResultado("2");
     }//GEN-LAST:event_btnNum2ActionPerformed
 
     private void btnNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum1ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "1");
+        set_lblResultado("1");
     }//GEN-LAST:event_btnNum1ActionPerformed
 
     private void btnNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum3ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "3");
+        set_lblResultado("3");
     }//GEN-LAST:event_btnNum3ActionPerformed
 
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
@@ -636,7 +640,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void btnNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum0ActionPerformed
         // TODO add your handling code here:
-        lblResultado.setText(lblResultado.getText() + "0");
+        set_lblResultado("0");
     }//GEN-LAST:event_btnNum0ActionPerformed
 
     // O botão de igual apenas funcionará caso haja valor na tela e em memória
