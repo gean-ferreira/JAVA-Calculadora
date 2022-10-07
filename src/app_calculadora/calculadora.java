@@ -16,7 +16,6 @@ public class calculadora extends javax.swing.JFrame {
     double num, ans; 
     int calculation; // Variável que seta as operações lógicas
     boolean isStarting = true;
-    String strCalculation;
     
     /**
      * Creates new form calculator
@@ -633,9 +632,10 @@ public class calculadora extends javax.swing.JFrame {
         set_lblResultado("3");
     }//GEN-LAST:event_btnNum3ActionPerformed
 
+    // Caso haja um ponto na tela o botão não retornará nada
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
-        // TODO add your handling code here:
-        if (!lblResultado.getText().contains(".")) {
+        System.out.println(lblResultado.getText().length());
+        if (!lblResultado.getText().contains(".") && lblResultado.getText().length() > 0) {
             set_lblResultado(".");
         }
     }//GEN-LAST:event_btnDotActionPerformed
@@ -670,6 +670,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void lblResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblResultadoActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_lblResultadoActionPerformed
 
     /**
